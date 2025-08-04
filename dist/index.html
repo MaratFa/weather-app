@@ -1,16 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Weather App</title>
-</head>
-<body>
-  <main>
-    <section id="searchBar" class="searchBar"></section>
-    <section id="currentForecast" class="currentForecast"></section>
-    <nav id="navButtons" class="navButtons"></nav>
-    <section id="dailyForecast" class="dailyForecast"></section>
-  </main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main>
+      <h1>Responsive Weather App Powered by the Open Weather A P I</h1>
+      <section id="searchBar" class="searchBar">
+        <form id="searchBar__form" class="searchBar__form" role="search">
+          <label for="searchBar__text">Enter a new location</label>
+          <input
+            type="text"
+            id="searchBar__text"
+            class="searchBar__text"
+            role="searchbox"
+            size="40"
+            autocomplete="off"
+            placeholder="City, State, Country"
+          />
+          <button
+            id="searchBar__button"
+            class="searchBar__button"
+            title="Submit Location"
+            aria-label="Enter Zip Code or City, State, and Country to retrieve weather conditions"
+          >
+            <i class="fa fa-search"></i>
+
+
+
+
+
+
+
+
+            
+            
+            Submit
+          </button>
+        </form>
+      </section>
+      <section id="currentForecast" class="currentForecast"></section>
+      <nav id="navButtons" class="navButtons"></nav>
+      <section id="dailyForecast" class="dailyForecast"></section>
+    </main>
+  </body>
 </html>
