@@ -1,3 +1,4 @@
+@import "../abstracts/colors";
 .offscreen {
   position: absolute;
   left: -10000px;
@@ -7,7 +8,7 @@
   position: absolute;
   top: -999px;
   left: 0;
-  background-color: $text-shadow-color;
+  background: $text-shadow-color;
   padding: 14px;
   z-index: 1;
   color: $font-color;
