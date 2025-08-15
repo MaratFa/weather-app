@@ -1,3 +1,5 @@
+import { setLocationObject } from "./dataFunctions.js";
+import { addSpinner, displayError } from "./domFunctions.js";
 import CurrentLocation from "./CurrentLocation.js";
 const currentLoc = new CurrentLocation();
 
@@ -20,4 +22,20 @@ const getGeoWeather = (event) => {
   }
   if (!navigator.geolocation) return geoError();
   navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
+};
+
+const geoError = (errObj) => {
+  const errMsg = errObj ? errObj.emessage : "Geolocation not supported";
+  displayError(errMsg, errMsg);
+};
+
+const geoSuccess = (position) => {
+  const myCoordsObj = {
+    lat: position.coords.latitude,
+    lon: position.coords.longitude,
+    name: `Lat:${position.coords.latitude} Long:${position.coords.longitude}`,
+  };
+  setLocationObject(currentLoc, myCoordsObj);
+  console.log(currentLoc);
+  // update data and display
 };
