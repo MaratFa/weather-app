@@ -36,9 +36,10 @@ const geoSuccess = (position) => {
     name: `Lat:${position.coords.latitude} Long:${position.coords.longitude}`,
   };
   setLocationObject(currentLoc, myCoordsObj);
-  console.log(currentLoc);
-
-  // update data and display
+  updateDataAndDisplay(currentLoc);
 };
 
-
+const updateDataAndDisplay = async (locationObj) => {
+  // const weatherJson = await getWeatherFromCoords(locationObj);
+  // if (weatherJson) updateDisplay(weatherJson, locationObj);
+};
